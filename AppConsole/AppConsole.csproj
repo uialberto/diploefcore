@@ -133,6 +133,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Diplomado.DataAccess\Diplomado.DataAccess.csproj">
+      <Project>{3621224f-22b2-440d-84a3-27a8c80c18c0}</Project>
+      <Name>Diplomado.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diplomado.Entities\Diplomado.Entities.csproj">
+      <Project>{e06c80ee-f38d-485f-aa45-535a16f3082b}</Project>
+      <Name>Diplomado.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

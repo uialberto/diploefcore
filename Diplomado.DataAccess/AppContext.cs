@@ -13,9 +13,14 @@ namespace Diplomado.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //Server=localhost;Database=aspnet-MVCAuthSQL;Trusted_Connection=False;MultipleActiveResultSets=true;User Id=SA;Password=my-secret-password;
             optionsBuilder.UseSqlServer(
-                "Server=(localdb)\\mssqllocaldb;Database=Northwind;Trusted_Connection=True;"
+                "Server=.\\odin;Database=Northwind_Migra;Trusted_Connection=False;User Id=desa;Password=desa"
             );
+
+            //optionsBuilder.UseSqlServer(
+            //    "Server=(localdb)\\mssqllocaldb;Database=Northwind;Trusted_Connection=True;"
+            //);
         }
     }
 }

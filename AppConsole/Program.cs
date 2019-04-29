@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Diplomado.Entities;
+using System;
+using AppContext = Diplomado.DataAccess.AppContext;
 
 namespace AppConsole
 {
@@ -10,6 +8,27 @@ namespace AppConsole
     {
         static void Main(string[] args)
         {
+
+            using (var context = new AppContext())
+            {
+                Console.WriteLine("Introduce el nombre de gategoras");
+                var category = Console.ReadLine();
+                var newCategory = new Category
+                {
+                    CategoryName = category
+                };
+                context.Categories.Add(newCategory);
+                var rowAffected = context.SaveChanges();
+                Console.WriteLine($"Número de registros afectados {rowAffected}");
+                Console.WriteLine("Categorias:");
+                foreach (var entity in context.Categories)
+                {
+                    Console.WriteLine($"{entity.CategoryID}, {entity.CategoryName}");
+                }
+
+                Console.ReadLine();
+
+            }
         }
     }
 }
