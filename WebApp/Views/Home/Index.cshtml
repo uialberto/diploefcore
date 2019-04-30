@@ -27,7 +27,11 @@
         </tr>
         @foreach (var dto in Model)
         {
-            <tr><td>@dto.CategoryID</td><td>@dto.CategoryName</td></tr>
+            <tr>
+                <td>@Html.ActionLink("Ver Detalle","Details", new {id=@dto.CategoryID})</td>
+                @*<td>@dto.CategoryID</td>*@
+                <td>@dto.CategoryName</td>
+            </tr>
         }
     </table>
     </body>
