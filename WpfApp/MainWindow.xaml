@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Label>Categoria:</Label>
+            <TextBox Name="txtCategoryName" Margin="10" Width="150"></TextBox>
+            <Button Name="btnCreate" Content="Crear" Click="BtnCreate_Click"></Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" Name="DGCategories"></DataGrid>
     </Grid>
 </Window>
