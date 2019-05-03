@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Diplomado.Entities;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace WpfApp
 {
@@ -33,6 +34,18 @@ namespace WpfApp
         {
             var result = _context.Categories.ToList();
             DGCategories.ItemsSource = result;
+        }
+
+        private void DGCategories_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Category category = DGCategories.SelectedItem as Category;
+            var ventana = new UpdateAndDelete(_context,category);
+            ventana.ShowDialog();
+        }
+
+        private void BtnCargar_OnClick(object sender, RoutedEventArgs e)
+        {
+           LoadCategories();
         }
     }
 }

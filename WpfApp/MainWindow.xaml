@@ -15,7 +15,8 @@
             <Label>Categoria:</Label>
             <TextBox Name="txtCategoryName" Margin="10" Width="150"></TextBox>
             <Button Name="btnCreate" Content="Crear" Click="BtnCreate_Click"></Button>
+            <Button Name="btnCargar" Content="Actualizar" Click="BtnCargar_OnClick"></Button>
         </StackPanel>
-        <DataGrid Grid.Row="1" Name="DGCategories"></DataGrid>
+        <DataGrid Grid.Row="1" Name="DGCategories" SelectionChanged="DGCategories_OnSelectionChanged"></DataGrid>
     </Grid>
 </Window>
