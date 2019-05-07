@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConsole", "AppConsole\AppConsole.csproj", "{8CCE4B4C-2B7D-4AD9-98E4-B9558B683C07}"
 EndProject
@@ -12,6 +12,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{051EEB35-78E9-45B0-8A5E-99612B15C128}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{F22CAD7A-3767-40BD-BCC6-75B466C26C08}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Northwind", "Northwind", "{F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diplo.Northwind.DataAccess", "Diplo.Northwind.DataAccess\Diplo.Northwind.DataAccess.csproj", "{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diplo.Northwind.Entities", "Diplo.Northwind.Entities\Diplo.Northwind.Entities.csproj", "{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diplo.Cliente.AppConsole", "Diplo.Cliente.AppConsole\Diplo.Cliente.AppConsole.csproj", "{8F625989-2F11-4342-B70B-2ABBB7F34B41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +47,26 @@ Global
 		{F22CAD7A-3767-40BD-BCC6-75B466C26C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F22CAD7A-3767-40BD-BCC6-75B466C26C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F22CAD7A-3767-40BD-BCC6-75B466C26C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F625989-2F11-4342-B70B-2ABBB7F34B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F625989-2F11-4342-B70B-2ABBB7F34B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F625989-2F11-4342-B70B-2ABBB7F34B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F625989-2F11-4342-B70B-2ABBB7F34B41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF} = {F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}
+		{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180} = {F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}
+		{8F625989-2F11-4342-B70B-2ABBB7F34B41} = {F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FAC0BF0-EBE4-4059-A7F3-5BFCEFF23DDD}
