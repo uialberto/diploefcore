@@ -126,11 +126,64 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Diplo.Northwind.DataAccess\NorthwindContext.cs">
+      <Link>NorthwindContext.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Categories.cs">
+      <Link>Categories.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\CustomerCustomerDemo.cs">
+      <Link>CustomerCustomerDemo.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\CustomerDemographics.cs">
+      <Link>CustomerDemographics.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Customers.cs">
+      <Link>Customers.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Employees.cs">
+      <Link>Employees.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\EmployeeTerritories.cs">
+      <Link>EmployeeTerritories.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\OrderDetails.cs">
+      <Link>OrderDetails.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Orders.cs">
+      <Link>Orders.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Products.cs">
+      <Link>Products.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Region.cs">
+      <Link>Region.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Shippers.cs">
+      <Link>Shippers.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Suppliers.cs">
+      <Link>Suppliers.cs</Link>
+    </Compile>
+    <Compile Include="..\Diplo.Northwind.Entities\Territories.cs">
+      <Link>Territories.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Diplo.Northwind.DataAccess\Diplo.Northwind.DataAccess.csproj">
+      <Project>{3c544f2a-fcc7-49e6-a55b-1e2ed6e987ef}</Project>
+      <Name>Diplo.Northwind.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Diplo.Northwind.Entities\Diplo.Northwind.Entities.csproj">
+      <Project>{2ab55f33-2b60-47a0-aaf7-61e0c0aec180}</Project>
+      <Name>Diplo.Northwind.Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

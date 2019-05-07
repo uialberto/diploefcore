@@ -1,0 +1,1 @@
+Scaffold-DBContext "Server=.\odin;Database=Northwind;Trusted_Connection=False;User Id=desa;Password=desa;" Microsoft.EntityFrameworkCore.SqlServer -ContextDir "..\Diplo.Northwind.DataAccess" -OutputDir "..\Diplo.Northwind.Entities"
