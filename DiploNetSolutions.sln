@@ -15,13 +15,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Northwind", "Northwind", "{F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diplo.Northwind.DataAccess", "Diplo.Northwind.DataAccess\Diplo.Northwind.DataAccess.csproj", "{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diplo.Northwind.DataAccess", "Diplo.Northwind.DataAccess\Diplo.Northwind.DataAccess.csproj", "{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diplo.Northwind.Entities", "Diplo.Northwind.Entities\Diplo.Northwind.Entities.csproj", "{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diplo.Northwind.Entities", "Diplo.Northwind.Entities\Diplo.Northwind.Entities.csproj", "{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diplo.Cliente.AppConsole", "Diplo.Cliente.AppConsole\Diplo.Cliente.AppConsole.csproj", "{8F625989-2F11-4342-B70B-2ABBB7F34B41}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inicial", "Inicial", "{9DBB2590-B2C1-4C14-A08C-6AB2BD68E488}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCore", "NetCore", "{88307821-47E6-4FD8-9D53-BCB533702F1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.AppConsole", "Core.AppConsole\Core.AppConsole.csproj", "{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +65,10 @@ Global
 		{8F625989-2F11-4342-B70B-2ABBB7F34B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F625989-2F11-4342-B70B-2ABBB7F34B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F625989-2F11-4342-B70B-2ABBB7F34B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +82,7 @@ Global
 		{3C544F2A-FCC7-49E6-A55B-1E2ED6E987EF} = {F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}
 		{2AB55F33-2B60-47A0-AAF7-61E0C0AEC180} = {F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}
 		{8F625989-2F11-4342-B70B-2ABBB7F34B41} = {F8AD1F74-BC1B-44D7-A68D-960DD045AEF9}
+		{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD} = {88307821-47E6-4FD8-9D53-BCB533702F1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FAC0BF0-EBE4-4059-A7F3-5BFCEFF23DDD}
