@@ -25,11 +25,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inicial", "Inicial", "{9DBB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NetCore", "NetCore", "{88307821-47E6-4FD8-9D53-BCB533702F1A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.AppConsole", "Core.AppConsole\Core.AppConsole.csproj", "{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.AppConsole", "Core.AppConsole\Core.AppConsole.csproj", "{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Entities", "Northwind.Entities\Northwind.Entities.csproj", "{9C37E841-E4E2-40E2-90A1-5D676810D960}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.Entities", "Northwind.Entities\Northwind.Entities.csproj", "{9C37E841-E4E2-40E2-90A1-5D676810D960}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.DataAccess", "Northwind.DataAccess\Northwind.DataAccess.csproj", "{1A1682BD-B568-4218-AA99-7FD223B7BBB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Northwind.DataAccess", "Northwind.DataAccess\Northwind.DataAccess.csproj", "{1A1682BD-B568-4218-AA99-7FD223B7BBB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.AppWeb", "Core.AppWeb\Core.AppWeb.csproj", "{5042D420-2318-4FDA-B030-56D10426D1DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{1A1682BD-B568-4218-AA99-7FD223B7BBB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A1682BD-B568-4218-AA99-7FD223B7BBB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A1682BD-B568-4218-AA99-7FD223B7BBB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5042D420-2318-4FDA-B030-56D10426D1DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5042D420-2318-4FDA-B030-56D10426D1DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5042D420-2318-4FDA-B030-56D10426D1DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5042D420-2318-4FDA-B030-56D10426D1DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +103,7 @@ Global
 		{73DDE974-2C0D-45C7-AB32-8DEAC3AC6ABD} = {88307821-47E6-4FD8-9D53-BCB533702F1A}
 		{9C37E841-E4E2-40E2-90A1-5D676810D960} = {88307821-47E6-4FD8-9D53-BCB533702F1A}
 		{1A1682BD-B568-4218-AA99-7FD223B7BBB5} = {88307821-47E6-4FD8-9D53-BCB533702F1A}
+		{5042D420-2318-4FDA-B030-56D10426D1DD} = {88307821-47E6-4FD8-9D53-BCB533702F1A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FAC0BF0-EBE4-4059-A7F3-5BFCEFF23DDD}
