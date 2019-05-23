@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Northwind.Entities;
+using System;
 
 namespace Core.AppConsole
 {
@@ -6,7 +7,26 @@ namespace Core.AppConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using (var context = new Northwind.DataAccess.AppContext())
+            {
+                Console.WriteLine("Introduce el nombre de gategoras");
+                var category = Console.ReadLine();
+                var newCategory = new Category
+                {
+                    CategoryName = category
+                };
+                context.Categories.Add(newCategory);
+                var rowAffected = context.SaveChanges();
+                Console.WriteLine($"Número de registros afectados {rowAffected}");
+                Console.WriteLine("Categorias:");
+                foreach (var entity in context.Categories)
+                {
+                    Console.WriteLine($"{entity.CategoryID}, {entity.CategoryName}");
+                }
+
+                Console.ReadLine();
+
+            }
         }
     }
 }
