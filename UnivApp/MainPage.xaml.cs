@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Univ.Northwind.Entities;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,31 @@ namespace UnivApp
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new Univ.Northwind.DataAccess.AppContext())
+            {
+                var category = new Category()
+                {
+                    CategoryName = CategoryName.Text
+                };
+
+                context.Categories.Add(category);
+
+                context.SaveChanges();
+
+                Categories.ItemsSource = context.Categories.ToList();
+            }
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            using (var context = new Univ.Northwind.DataAccess.AppContext())
+            {
+                Categories.ItemsSource = context.Categories.ToList();
+            }
         }
     }
 }

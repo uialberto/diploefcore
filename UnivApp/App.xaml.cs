@@ -15,6 +15,11 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Univ.Northwind.DataAccess;
+using Microsoft.EntityFrameworkCore;
+
+
+
 namespace UnivApp
 {
     /// <summary>
@@ -30,6 +35,12 @@ namespace UnivApp
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            using (var context = new Univ.Northwind.DataAccess.AppContext())
+            {
+                context.Database.Migrate();
+
+            }
         }
 
         /// <summary>

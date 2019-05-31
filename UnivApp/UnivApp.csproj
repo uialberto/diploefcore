@@ -158,6 +158,16 @@
       <Version>6.2.8</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Univ.Northwind.DataAccess\Univ.Northwind.DataAccess.csproj">
+      <Project>{6a909194-ecdf-46d1-892a-7c35744e623a}</Project>
+      <Name>Univ.Northwind.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Univ.Northwind.Entities\Univ.Northwind.Entities.csproj">
+      <Project>{b73039ff-d46d-4a15-a16d-3c3cafa9a720}</Project>
+      <Name>Univ.Northwind.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
