@@ -2,10 +2,20 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using Cloud.Northwind.DataAccess;
+using Microsoft.EntityFrameworkCore;
+
+
 namespace Cloud.AppXamForm
 {
     public partial class App : Application
     {
+        public static Northwind.DataAccess.AppContext GetAppContext()
+        {
+            var dbPath = DependencyService.Get<IDataBaseAppService>().GetFullPath("CloudNorthWindLite.db");
+            return new Northwind.DataAccess.AppContext(dbPath);
+        }
+
         public App()
         {
             InitializeComponent();
