@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Cloud.AppXamForm"
-             x:Class="Cloud.AppXamForm.MainPage">
+<ContentPage
+    x:Class="Cloud.AppXamForm.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Cloud.AppXamForm">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <StackLayout.Padding>
+            <OnPlatform x:TypeArguments="Thickness" iOS="0,50,0,0" />
+        </StackLayout.Padding>
+        <Entry x:Name="CategoryName" />
+        <Button Clicked="Button_Clicked" Text="Agregar" />
+        <ListView x:Name="Categories">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding CategoryName}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 
 </ContentPage>

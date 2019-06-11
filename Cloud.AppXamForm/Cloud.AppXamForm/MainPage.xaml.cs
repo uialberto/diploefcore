@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Cloud.Northwind.Entities;
 
 namespace Cloud.AppXamForm
 {
@@ -16,6 +17,27 @@ namespace Cloud.AppXamForm
         public MainPage()
         {
             InitializeComponent();
+            using (var context = App.GetAppContext())
+            { 
+                Categories.ItemsSource = context.Categories.ToList();
+            }
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            using (var context = App.GetAppContext())
+            {
+                var entity = new Category()
+                {
+                    CategoryName = CategoryName.Text
+                };
+
+                context.Categories.Add(entity);
+                context.SaveChanges();
+
+                Categories.ItemsSource = context.Categories.ToList();
+
+            }
         }
     }
 }

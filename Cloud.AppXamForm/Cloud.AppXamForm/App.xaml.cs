@@ -20,6 +20,8 @@ namespace Cloud.AppXamForm
         {
             InitializeComponent();
 
+            GetAppContext().Database.Migrate();
+
             MainPage = new MainPage();
         }
 
