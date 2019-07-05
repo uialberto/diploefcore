@@ -15,7 +15,9 @@ namespace Northwind.DataAccess
         {
             //Server=localhost;Database=aspnet-MVCAuthSQL;Trusted_Connection=False;MultipleActiveResultSets=true;User Id=SA;Password=my-secret-password;
 
-            optionsBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwind;Trusted_Connection=False;User Id=desa;Password=desa");
+            //optionsBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwind;Trusted_Connection=False;User Id=desa;Password=desa");
+
+            optionsBuilder.UseSqlServer(System.Configuration.ConfigurationManager.ConnectionStrings["AppContext"].ConnectionString);
 
             //optionsBuilder.UseSqlServer(
             //    "Server=(localdb)\\mssqllocaldb;Database=Northwind;Trusted_Connection=True;"
