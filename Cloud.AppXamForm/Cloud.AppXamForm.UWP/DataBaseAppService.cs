@@ -14,6 +14,7 @@ namespace Cloud.AppXamForm.UWP
     {
         public string GetFullPath(string dbFileName)
         {
+
             return Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, dbFileName);
         }
     }
