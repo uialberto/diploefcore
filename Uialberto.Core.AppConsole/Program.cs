@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using Uialberto.Northwind.Entities;
 
 namespace Uialberto.Core.AppConsole
@@ -7,7 +8,11 @@ namespace Uialberto.Core.AppConsole
     {
         static void Main(string[] args)
         {
-            using (var context = new Northwind.DataAccess.AppContext())
+
+            var optionBuilder = new DbContextOptionsBuilder<Uialberto.Northwind.DataAccess.AppContext>();
+            optionBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwind;Trusted_Connection=False;User Id=desa;Password=desa");
+
+            using (var context = new Northwind.DataAccess.AppContext(optionBuilder.Options))
             {
                 Console.WriteLine("Introduce el nombre de gategoras");
                 var category = Console.ReadLine();
