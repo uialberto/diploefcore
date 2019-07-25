@@ -132,10 +132,4 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\Cloud.AppXamForm\Cloud.AppXamForm.csproj">
-      <Project>{3BE5CCAF-AD8C-4093-BE88-03597FD55CAD}</Project>
-      <Name>Cloud.AppXamForm</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

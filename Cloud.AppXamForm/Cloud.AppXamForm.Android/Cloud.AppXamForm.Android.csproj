@@ -101,11 +101,5 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Cloud.AppXamForm\Cloud.AppXamForm.csproj">
-      <Project>{3BE5CCAF-AD8C-4093-BE88-03597FD55CAD}</Project>
-      <Name>Cloud.AppXamForm</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

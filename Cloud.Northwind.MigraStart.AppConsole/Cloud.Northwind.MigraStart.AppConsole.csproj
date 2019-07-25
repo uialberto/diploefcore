@@ -13,9 +13,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Cloud.Northwind.DataAccess\Cloud.Northwind.DataAccess.csproj" />
-    <ProjectReference Include="..\Cloud.Northwind.Entities\Cloud.Northwind.Entities.csproj" />
-  </ItemGroup>
-
 </Project>
