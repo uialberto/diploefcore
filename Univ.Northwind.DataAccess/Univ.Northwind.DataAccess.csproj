@@ -8,8 +8,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Univ.Northwind.Entities\Univ.Northwind.Entities.csproj" />
-  </ItemGroup>
-
 </Project>

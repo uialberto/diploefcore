@@ -12,9 +12,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Univ.Northwind.DataAccess\Univ.Northwind.DataAccess.csproj" />
-    <ProjectReference Include="..\Univ.Northwind.Entities\Univ.Northwind.Entities.csproj" />
-  </ItemGroup>
-
 </Project>
