@@ -8,15 +8,17 @@ using System.Text;
 
 namespace Core.Northwind.DataAccess
 {
-    public class AppContext : DbContext
+    public class AppCoreContext : DbContext
     {
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: false).Build();
-            optionsBuilder.UseSqlServer(config.GetConnectionString("AppContext")); 
+            optionsBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwindTest;Trusted_Connection=False;User Id=desa;Password=desa");
+
+            //var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: false).Build();
+            //optionsBuilder.UseSqlServer(config.GetConnectionString("AppContext")); 
         }
     }
 }
