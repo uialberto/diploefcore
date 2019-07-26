@@ -12,10 +12,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
-
-  <ItemGroup>
-    <ProjectReference Include="..\Northwind.DataAccess\Northwind.DataAccess.csproj" />
-    <ProjectReference Include="..\Northwind.Entities\Northwind.Entities.csproj" />
-  </ItemGroup>
-
 </Project>
