@@ -4,9 +4,9 @@ using Uialberto.Northwind.Entities;
 
 namespace Uialberto.Northwind.DataAccess
 {
-    public class AppContext : DbContext
+    public class AppCoreContext : DbContext
     {
-        public AppContext(DbContextOptions<AppContext> options) : base(options)
+        public AppCoreContext(DbContextOptions<AppCoreContext> options) : base(options)
         {
 
         }
