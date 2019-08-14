@@ -15,10 +15,10 @@ namespace Core.Northwind.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwindTest;Trusted_Connection=False;User Id=desa;Password=desa");
-
-            //var config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: false).Build();
-            //optionsBuilder.UseSqlServer(config.GetConnectionString("AppContext")); 
+            //optionsBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwindTest;Trusted_Connection=False;User Id=desa;Password=desa");
+            var currentDirectory = Directory.GetCurrentDirectory();
+            var config = new ConfigurationBuilder().SetBasePath(currentDirectory).AddJsonFile("appsettings.json", optional: false).Build();
+            optionsBuilder.UseSqlServer(config.GetConnectionString("AppContext"));
         }
     }
 }
