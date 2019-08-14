@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
+using Uialberto.Northwind.DataAccess;
 using Uialberto.Northwind.Entities;
 
 namespace Uialberto.Core.AppConsole
@@ -9,10 +10,13 @@ namespace Uialberto.Core.AppConsole
         static void Main(string[] args)
         {
 
-            var optionBuilder = new DbContextOptionsBuilder<Uialberto.Northwind.DataAccess.AppContext>();
-            optionBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwind;Trusted_Connection=False;User Id=desa;Password=desa");
+            var optionBuilder = new DbContextOptionsBuilder<AppCoreContext>();
 
-            using (var context = new Northwind.DataAccess.AppContext(optionBuilder.Options))
+            optionBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwind;Trusted_Connection=False;User Id=desa;Password=desa",
+                            options => options.CommandTimeout(60))
+                         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+
+            using (var context = new AppCoreContext(optionBuilder.Options))
             {
                 Console.WriteLine("Introduce el nombre de gategoras");
                 var category = Console.ReadLine();

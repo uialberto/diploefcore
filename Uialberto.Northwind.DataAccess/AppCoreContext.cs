@@ -13,6 +13,7 @@ namespace Uialberto.Northwind.DataAccess
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<Category> Categories { get; set; }
 
+        ////
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    //Server=localhost;Database=aspnet-MVCAuthSQL;Trusted_Connection=False;MultipleActiveResultSets=true;User Id=SA;Password=my-secret-password;
