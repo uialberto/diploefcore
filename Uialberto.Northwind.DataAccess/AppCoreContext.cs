@@ -20,6 +20,9 @@ namespace Uialberto.Northwind.DataAccess
             modelBuilder.Entity<Employee>().Ignore(ele => ele.RFC);
             modelBuilder.Entity<Employee>().HasKey(ele => new { ele.CompanyID, ele.EmployeeNumber });
             //modelBuilder.Ignore<Product>();
+            modelBuilder.Entity<Category>().Property(ele => ele.CategoryID).ValueGeneratedNever();
+            modelBuilder.Entity<Category>().Property(ele => ele.Inserted).ValueGeneratedOnAdd();
+            modelBuilder.Entity<Category>().Property(ele => ele.LastUpdate).ValueGeneratedOnAddOrUpdate();
 
         }
         //
