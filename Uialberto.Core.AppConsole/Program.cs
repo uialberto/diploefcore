@@ -16,26 +16,26 @@ namespace Uialberto.Core.AppConsole
                             options => options.CommandTimeout(60))
                          .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
-            using (var context = new AppCoreContext(optionBuilder.Options))
-            {
-                Console.WriteLine("Introduce el nombre de gategoras");
-                var category = Console.ReadLine();
-                var newCategory = new Category
-                {
-                    CategoryName = category
-                };
-                context.Categories.Add(newCategory);
-                var rowAffected = context.SaveChanges();
-                Console.WriteLine($"Número de registros afectados {rowAffected}");
-                Console.WriteLine("Categorias:");
-                foreach (var entity in context.Categories)
-                {
-                    Console.WriteLine($"{entity.CategoryID}, {entity.CategoryName}");
-                }
+            //using (var context = new AppCoreContext(optionBuilder.Options))
+            //{
+            //    Console.WriteLine("Introduce el nombre de gategoras");
+            //    var category = Console.ReadLine();
+            //    var newCategory = new Category
+            //    {
+            //        CategoryName = category
+            //    };
+            //    context.Categories.Add(newCategory);
+            //    var rowAffected = context.SaveChanges();
+            //    Console.WriteLine($"Número de registros afectados {rowAffected}");
+            //    Console.WriteLine("Categorias:");
+            //    foreach (var entity in context.Categories)
+            //    {
+            //        Console.WriteLine($"{entity.CategoryID}, {entity.CategoryName}");
+            //    }
 
-                Console.ReadLine();
+            //    Console.ReadLine();
 
-            }
+            //}
         }
     }
 }
