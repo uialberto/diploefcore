@@ -11,14 +11,14 @@ namespace Uialberto.Northwind.DataAccess
 
         //}
         //public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
-        //public virtual DbSet<Employee> Employees { get; set; }
+        //public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Employee>();
-            modelBuilder.Ignore<Product>();
+            modelBuilder.Entity<Employee>().Ignore(ele => ele.RFC);
+            //modelBuilder.Ignore<Product>();
 
         }
         //
