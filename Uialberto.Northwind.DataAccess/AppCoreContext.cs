@@ -18,6 +18,7 @@ namespace Uialberto.Northwind.DataAccess
         {
             //base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Employee>().Ignore(ele => ele.RFC);
+            modelBuilder.Entity<Employee>().HasKey(ele => new { ele.CompanyID, ele.EmployeeNumber });
             //modelBuilder.Ignore<Product>();
 
         }
