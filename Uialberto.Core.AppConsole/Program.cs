@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Uialberto.Northwind.Entities;
 
 namespace Uialberto.Core.AppConsole
@@ -27,6 +28,15 @@ namespace Uialberto.Core.AppConsole
             //    Console.ReadLine();
 
             //}
+
+            using (var context = new Northwind.DataAccess.AppContext())
+            {
+                var employees = context.Employees.ToList();
+                var vendedores = context.Vendedores.ToList();
+
+                Console.ReadLine();
+            }
+
         }
     }
 }

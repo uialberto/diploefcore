@@ -15,7 +15,7 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    EmployeeType = table.Column<byte>(nullable: false),
+                    Type = table.Column<byte>(nullable: false, defaultValue: (byte)0),
                     SellingAreaID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
@@ -25,16 +25,17 @@ namespace Uialberto.Northwind.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "Employees",
-                columns: new[] { "EmployeeID", "EmployeeType", "FirstName", "LastName" },
-                values: new object[,]
-                {
-                    { 1, (byte)0, "Alberto", "Reyes" },
-                    { 2, (byte)0, "Fernando", "Baigorria" }
-                });
+                columns: new[] { "EmployeeID", "FirstName", "LastName" },
+                values: new object[] { 1, "Alberto", "Reyes" });
 
             migrationBuilder.InsertData(
                 table: "Employees",
-                columns: new[] { "EmployeeID", "EmployeeType", "FirstName", "LastName", "SellingAreaID" },
+                columns: new[] { "EmployeeID", "FirstName", "LastName" },
+                values: new object[] { 2, "Fernando", "Baigorria" });
+
+            migrationBuilder.InsertData(
+                table: "Employees",
+                columns: new[] { "EmployeeID", "Type", "FirstName", "LastName", "SellingAreaID" },
                 values: new object[,]
                 {
                     { 3, (byte)1, "Milton", "Lazo", 1 },

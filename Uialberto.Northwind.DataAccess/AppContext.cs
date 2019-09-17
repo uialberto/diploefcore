@@ -27,10 +27,28 @@ namespace Uialberto.Northwind.DataAccess
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Employee>()
-                .HasDiscriminator<byte>("EmployeeType")
-                .HasValue<Employee>(0)
-                .HasValue<Vendedor>(1);
+            //modelBuilder.Entity<Employee>()
+            //    .HasDiscriminator<byte>("EmployeeType")   // Propiedades Sombra
+            //    .HasValue<Employee>(0)
+            //    .HasValue<Vendedor>(1);
+
+            //modelBuilder.Entity<Employee>()
+            //   .HasDiscriminator(ele => ele.EmployeeType)
+            //   .HasValue<Employee>(0)
+            //   .HasValue<Vendedor>(1);
+
+            modelBuilder.Entity<Employee>(
+                    ele => {
+
+                        ele.HasDiscriminator(ed => ed.EmployeeType)
+                        .HasValue<Employee>(0)
+                        .HasValue<Vendedor>(1);
+
+                        ele.Property(ed => ed.EmployeeType)
+                        .HasDefaultValue(0)
+                        .HasColumnName("Type");
+                    }
+                );
 
             modelBuilder.Entity<Employee>()
                 .HasData(

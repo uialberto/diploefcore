@@ -24,7 +24,10 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<byte>("EmployeeType");
+                    b.Property<byte>("EmployeeType")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Type")
+                        .HasDefaultValue((byte)0);
 
                     b.Property<string>("FirstName");
 
@@ -40,12 +43,14 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                         new
                         {
                             EmployeeID = 1,
+                            EmployeeType = (byte)0,
                             FirstName = "Alberto",
                             LastName = "Reyes"
                         },
                         new
                         {
                             EmployeeID = 2,
+                            EmployeeType = (byte)0,
                             FirstName = "Fernando",
                             LastName = "Baigorria"
                         });
@@ -63,6 +68,7 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                         new
                         {
                             EmployeeID = 3,
+                            EmployeeType = (byte)0,
                             FirstName = "Milton",
                             LastName = "Lazo",
                             SellingAreaID = 1
@@ -70,6 +76,7 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                         new
                         {
                             EmployeeID = 4,
+                            EmployeeType = (byte)0,
                             FirstName = "Wilson",
                             LastName = "Lazo",
                             SellingAreaID = 2

@@ -9,5 +9,6 @@ namespace Uialberto.Northwind.Entities
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public byte EmployeeType { get; set; }
     }
 }
