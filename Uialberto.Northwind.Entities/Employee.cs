@@ -12,7 +12,8 @@ namespace Uialberto.Northwind.Entities
         public string EmployeeNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string FullName { get; }
+        public string FullName { get; set; }
+        public long CodeSequence { get; set; }
         //[Key]
         public string RFC { get; set; }
 

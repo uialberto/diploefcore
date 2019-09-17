@@ -19,14 +19,39 @@ namespace Uialberto.Northwind.DataAccess
             //base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Employee>().Ignore(ele => ele.RFC);
             modelBuilder.Entity<Employee>().HasKey(ele => new { ele.CompanyID, ele.EmployeeNumber });
-            modelBuilder.Entity<Employee>().Property(ele => ele.FullName).HasComputedColumnSql("[FirstName]+','+[LastName]");
+            modelBuilder.Entity<Employee>().Property(ele => ele.FullName).HasComputedColumnSql("[FirstName]+ ',' +[LastName]"); // Columnas Calculadas
 
             //modelBuilder.Ignore<Product>();
             modelBuilder.Entity<Category>().Property(ele => ele.CategoryID).ValueGeneratedNever();
             modelBuilder.Entity<Category>().Property(ele => ele.Inserted).ValueGeneratedOnAdd();
             modelBuilder.Entity<Category>().Property(ele => ele.LastUpdate).ValueGeneratedOnAddOrUpdate();
-            
 
+            
+            modelBuilder.HasSequence<long>("EmployeCodeSequence", "sales")          // Sequence
+                .StartsAt(10000)
+                .IncrementsBy(1);
+
+            modelBuilder.Entity<Employee>().Property(ele => ele.CodeSequence)       // Sequence
+                .HasDefaultValueSql("Next value for sales.EmployeCodeSequence");
+
+
+            //modelBuilder.Entity<Category>().HasIndex(ele => ele.CategoryName).HasName("Index_CategoryName");                                // Index 
+            //modelBuilder.Entity<Category>().HasIndex(ele => ele.CategoryName).HasName("Index_CategoryName").IsUnique();                     // Valida que no sea null
+            modelBuilder.Entity<Category>().HasIndex(ele => ele.CategoryName).HasName("Index_CategoryName").IsUnique().HasFilter(null);     // Permite null
+
+            modelBuilder.Entity<Product>()
+                .HasOne(ele => ele.Category)
+                .WithMany(p => p.Products)
+                .HasForeignKey("CategoryID")
+                .HasConstraintName("ForeingKey_Product_Category");                      // Llaves Foraneas
+
+            modelBuilder.Entity<Product>().Property(ele => ele.UnitsInStock).HasDefaultValue(10); // Valores por Defecto
+            modelBuilder.Entity<Product>().Property(ele => ele.CreatedDate).HasDefaultValueSql("getdate()"); // Valores por Defecto
+
+
+            modelBuilder.Entity<Category>()
+                .HasAlternateKey(ele => ele.CategoryName)
+                .HasName("AlternateKey_CategoryName");                                  // Clave Alterna (Restriccion Unique)
         }
         //
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

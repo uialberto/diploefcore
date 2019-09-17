@@ -10,32 +10,25 @@ namespace Uialberto.Core.AppConsole
         static void Main(string[] args)
         {
 
-            var optionBuilder = new DbContextOptionsBuilder<AppCoreContext>();
+            //var optionBuilder = new DbContextOptionsBuilder<AppCoreContext>();
 
-            optionBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwind;Trusted_Connection=False;User Id=desa;Password=desa",
-                            options => options.CommandTimeout(60))
-                         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+            //optionBuilder.UseSqlServer("Server=.\\odin;Database=CoreNorthwind;Trusted_Connection=False;User Id=desa;Password=desa",
+            //                options => options.CommandTimeout(60))
+            //             .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
-            //using (var context = new AppCoreContext(optionBuilder.Options))
-            //{
-            //    Console.WriteLine("Introduce el nombre de gategoras");
-            //    var category = Console.ReadLine();
-            //    var newCategory = new Category
-            //    {
-            //        CategoryName = category
-            //    };
-            //    context.Categories.Add(newCategory);
-            //    var rowAffected = context.SaveChanges();
-            //    Console.WriteLine($"Número de registros afectados {rowAffected}");
-            //    Console.WriteLine("Categorias:");
-            //    foreach (var entity in context.Categories)
-            //    {
-            //        Console.WriteLine($"{entity.CategoryID}, {entity.CategoryName}");
-            //    }
+            using (var context = new AppCoreContext())
+            {
+                Console.WriteLine("Introduce el nombre del Empleado");
+                var employee = new Employee { CompanyID = 1, EmployeeNumber = "90000", FirstName = "Luis Alberto", LastName= "Baigorria Rodas"};
+                var employee2 = new Employee { CompanyID = 2, EmployeeNumber = "90001", FirstName = "Carlos Alberto", LastName = "Rodas" };
+                var employee3 = new Employee { CompanyID = 3, EmployeeNumber = "90002", FirstName = "Alberto", LastName = "Sample" };
+                context.Employees.AddRange(employee, employee2,employee3);
+                context.SaveChanges();
+                Console.WriteLine($"{employee.CodeSequence}, {employee2.CodeSequence}, {employee3.CodeSequence}");
 
-            //    Console.ReadLine();
+                Console.ReadLine();
 
-            //}
+            }
         }
     }
 }
