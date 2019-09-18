@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uialberto.Northwind.DataAcc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uialberto.Northwind.Entities", "Uialberto.Northwind.Entities\Uialberto.Northwind.Entities.csproj", "{EBB0ED1B-27AC-4792-B787-DE770E2D37B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreAppWeb", "CoreAppWeb\CoreAppWeb.csproj", "{4C243FCF-B654-4D14-910D-75BDD61EC998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreAppWeb", "CoreAppWeb\CoreAppWeb.csproj", "{4C243FCF-B654-4D14-910D-75BDD61EC998}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppWPF", "AppWPF\AppWPF.csproj", "{5636817A-A669-4033-85A7-2C965E83110F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uialberto.Northwind.Bussines", "Uialberto.Northwind.Bussines\Uialberto.Northwind.Bussines.csproj", "{437E22B5-6F63-4EE0-A18B-482ADE7F511D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uialberto.Northwind.Bussines", "Uialberto.Northwind.Bussines\Uialberto.Northwind.Bussines.csproj", "{437E22B5-6F63-4EE0-A18B-482ADE7F511D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Presentacion", "01 Presentacion", "{5C26ABD5-5ABF-444E-AE80-EB6F6D3E73C2}"
 EndProject
@@ -23,11 +23,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 Dominio", "03 Dominio", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 Infraestructura", "04 Infraestructura", "{2464E779-4226-4068-BFA4-451B5BE6759D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uialberto.Northwind.AppServices", "Uialberto.Northwind.AppServices\Uialberto.Northwind.AppServices.csproj", "{803835EF-8B32-4F21-899A-175A3DC404B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uialberto.Northwind.AppServices", "Uialberto.Northwind.AppServices\Uialberto.Northwind.AppServices.csproj", "{803835EF-8B32-4F21-899A-175A3DC404B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uialberto.Northwind.Helpers", "Uialberto.Northwind.Helpers\Uialberto.Northwind.Helpers.csproj", "{E4905299-BC84-4750-BE22-DC7D4FF5EBB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uialberto.Northwind.Helpers", "Uialberto.Northwind.Helpers\Uialberto.Northwind.Helpers.csproj", "{E4905299-BC84-4750-BE22-DC7D4FF5EBB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConsole.Migrations", "AppConsole.Migrations\AppConsole.Migrations.csproj", "{AF314EB0-D40F-4707-AE60-512239CDE468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppConsole.Migrations", "AppConsole.Migrations\AppConsole.Migrations.csproj", "{AF314EB0-D40F-4707-AE60-512239CDE468}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -285,7 +285,7 @@ Global
 		{34052E61-2516-43D0-B8BF-110C0A7AB02B} = {1894C185-28DA-4DCC-86B6-5F41B06141C2}
 		{846F49C2-9A4A-4EA5-85B5-FFD8E4B3BEFB} = {1894C185-28DA-4DCC-86B6-5F41B06141C2}
 		{2464E779-4226-4068-BFA4-451B5BE6759D} = {1894C185-28DA-4DCC-86B6-5F41B06141C2}
-		{803835EF-8B32-4F21-899A-175A3DC404B2} = {34052E61-2516-43D0-B8BF-110C0A7AB02B}
+		{803835EF-8B32-4F21-899A-175A3DC404B2} = {846F49C2-9A4A-4EA5-85B5-FFD8E4B3BEFB}
 		{E4905299-BC84-4750-BE22-DC7D4FF5EBB5} = {2464E779-4226-4068-BFA4-451B5BE6759D}
 		{AF314EB0-D40F-4707-AE60-512239CDE468} = {5C26ABD5-5ABF-444E-AE80-EB6F6D3E73C2}
 	EndGlobalSection
