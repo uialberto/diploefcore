@@ -10,7 +10,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Uialberto.Northwind.AppServices\Uialberto.Northwind.AppServices.csproj" />
     <ProjectReference Include="..\Uialberto.Northwind.Entities\Uialberto.Northwind.Entities.csproj" />
     <ProjectReference Include="..\Uialberto.Northwind.Helpers\Uialberto.Northwind.Helpers.csproj" />
   </ItemGroup>

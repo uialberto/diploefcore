@@ -95,10 +95,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Uialberto.Northwind.AppServices\Uialberto.Northwind.AppServices.csproj">
-      <Project>{803835ef-8b32-4f21-899a-175a3dc404b2}</Project>
-      <Name>Uialberto.Northwind.AppServices</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Uialberto.Northwind.Bussines\Uialberto.Northwind.Bussines.csproj">
       <Project>{437e22b5-6f63-4ee0-a18b-482ade7f511d}</Project>
       <Name>Uialberto.Northwind.Bussines</Name>

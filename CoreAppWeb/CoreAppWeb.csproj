@@ -13,7 +13,6 @@
 
 
   <ItemGroup>
-    <ProjectReference Include="..\Uialberto.Northwind.AppServices\Uialberto.Northwind.AppServices.csproj" />
     <ProjectReference Include="..\Uialberto.Northwind.Bussines\Uialberto.Northwind.Bussines.csproj" />
     <ProjectReference Include="..\Uialberto.Northwind.Entities\Uialberto.Northwind.Entities.csproj" />
   </ItemGroup>

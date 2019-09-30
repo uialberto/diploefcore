@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Uialberto.Northwind.AppServices\Uialberto.Northwind.AppServices.csproj" />
     <ProjectReference Include="..\Uialberto.Northwind.DataAccess\Uialberto.Northwind.DataAccess.csproj" />
     <ProjectReference Include="..\Uialberto.Northwind.Entities\Uialberto.Northwind.Entities.csproj" />
   </ItemGroup>
