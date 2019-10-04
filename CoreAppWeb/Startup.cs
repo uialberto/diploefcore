@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Uialberto.Northwind.Services;
 
 namespace CoreAppWeb
 {
@@ -33,6 +34,10 @@ namespace CoreAppWeb
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddSingleton(typeof(ICategoryRepo), factory => Uialberto.Northwind.Bussines.RepoFactory.GetCategoryRepo());
+            services.AddSingleton(typeof(ILogRepo), factory => Uialberto.Northwind.Bussines.RepoFactory.GetLogRepo());
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
