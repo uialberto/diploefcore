@@ -1,0 +1,4 @@
+{
+  "DataBaseProvider": "UseSqlServer",
+  "ConnectionString": "Server=.\\odin;Database=nWPFAppWebTest;Trusted_Connection=False;User Id=desa;Password=desa;"
+}
