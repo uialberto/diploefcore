@@ -53,11 +53,13 @@ namespace AppWPF
             var repo = RepoFactory.GetCategoryRepo();            
             var process = repo.GetById(int.Parse(CategoryID.Text));
             if (process != null)
-            {
+            {              
                 CategoryName.Text = process.CategoryName;
                 CategoryDescription.Text = process.Description;
+                MessageBox.Show("Categoria encontrada");
             }
-            else {
+            else 
+            {
                 MessageBox.Show("No se pudo encontrar la Categoria");
                 CategoryName.Text = string.Empty;
                 CategoryDescription.Text = string.Empty;
