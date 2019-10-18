@@ -1,1 +1,120 @@
 Scaffold-DBContext "Server=.\odin;Database=Northwind;Trusted_Connection=False;User Id=desa;Password=desa;" Microsoft.EntityFrameworkCore.SqlServer -ContextDir "..\Diplo.Northwind.DataAccess" -OutputDir "..\Diplo.Northwind.Entities"
+
+
+MIGRATIONS
+
+
+La licencia de cada paquete la concede su propietario. NuGet no se hace responsable de los paquetes de terceros ni concede ninguna licencia sobre ellos. Algunos paquetes pueden incluir dependencias que se rigen por licencias adicionales. Siga la URL de origen del paquete (fuente) para determinar cualquier dependencia.
+
+Versión de host 5.3.0.6251 de la Consola del Administrador de paquetes
+
+Escriba 'get-help NuGet' para ver todos los comandos de NuGet disponibles.
+
+PM> Add-Migration InitialCreate
+To undo this action, use Remove-Migration.
+PM> update-database
+Applying migration '20191018005017_InitialCreate'.
+Done.
+PM> Add-Migration Feact-Employee
+To undo this action, use Remove-Migration.
+PM> update-database
+Applying migration '20191018005827_Feact-Employee'.
+Done.
+PM> Add-Migration Colum-Employee-Update
+An operation was scaffolded that may result in the loss of data. Please review the migration for accuracy.
+To undo this action, use Remove-Migration.
+PM> update-database
+Applying migration '20191018010234_Colum-Employee-Update'.
+Failed executing DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Employess] ADD [Name] nvarchar(max) NULL;
+System.Data.SqlClient.SqlException (0x80131904): Cannot find the object "Employess" because it does not exist or you do not have permissions.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:d3b7b4af-d759-41c9-a38a-2a1996d4414e
+Error Number:4902,State:1,Class:16
+Cannot find the object "Employess" because it does not exist or you do not have permissions.
+PM> update-database
+Applying migration '20191018010234_Colum-Employee-Update'.
+Failed executing DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+update Employee set Name= FirstName + ' ' + LastName
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Employee'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:c96a8a04-e92d-4ffa-b6aa-0244921c91c4
+Error Number:208,State:1,Class:16
+Invalid object name 'Employee'.
+PM> update-database
+Applying migration '20191018010234_Colum-Employee-Update'.
+Failed executing DbCommand (192ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Employees].[LastName]', N'Name', N'COLUMN';
+System.Data.SqlClient.SqlException (0x80131904): Error: The new name 'Name' is already in use as a COLUMN name and would cause a duplicate that is not permitted.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:14d6b532-2b3f-4940-8a01-bbdae9153a21
+Error Number:15335,State:1,Class:11
+Error: The new name 'Name' is already in use as a COLUMN name and would cause a duplicate that is not permitted.
+PM> update-database
+Applying migration '20191018010234_Colum-Employee-Update'.
+Failed executing DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+EXEC sp_rename N'[Employees].[LastName]', N'Name', N'COLUMN';
+System.Data.SqlClient.SqlException (0x80131904): Error: The new name 'Name' is already in use as a COLUMN name and would cause a duplicate that is not permitted.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite, String methodName)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+ClientConnectionId:91033382-cf0c-447b-a17b-3afceb27ed63
+Error Number:15335,State:1,Class:11
+Error: The new name 'Name' is already in use as a COLUMN name and would cause a duplicate that is not permitted.
+PM> update-database
+Applying migration '20191018010234_Colum-Employee-Update'.
+Done.
+PM> Add-Migration EmtyMigration
+To undo this action, use Remove-Migration.
+PM> update-database Feact-Employee
+Reverting migration '20191018010234_Colum-Employee-Update'.
+Done.
+PM> Script-Migration
+
+
+PM> Script-Migration
+PM> Script-Migration -from InitialCreate
+PM> Script-Migration -from InitialCreate -to Feact-Employee -- Desde inicio hasta fin de migracion.
+PM> Script-Migration -idempotent // Cuando no se sabe que migraciones han sido aplicadas a la base de datos
