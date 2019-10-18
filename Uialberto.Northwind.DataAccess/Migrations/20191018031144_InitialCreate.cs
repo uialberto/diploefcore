@@ -13,7 +13,9 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                 {
                     CategoryID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    CategoryName = table.Column<string>(nullable: true)
+                    CategoryName = table.Column<string>(nullable: true),
+                    Telefono = table.Column<string>(nullable: true),
+                    Celular = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -26,7 +28,7 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                 {
                     ProductID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ProductName = table.Column<string>(nullable: true),
+                    Producto = table.Column<string>(nullable: true),
                     UnitPrice = table.Column<decimal>(nullable: false),
                     UnitsInStock = table.Column<int>(nullable: false),
                     CategoryID = table.Column<int>(nullable: false)

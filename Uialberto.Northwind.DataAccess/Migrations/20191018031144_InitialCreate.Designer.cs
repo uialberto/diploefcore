@@ -9,8 +9,8 @@ using Uialberto.Northwind.DataAccess;
 namespace Uialberto.Northwind.DataAccess.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20191018022304_ActualizarProducto")]
-    partial class ActualizarProducto
+    [Migration("20191018031144_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
