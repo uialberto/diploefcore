@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Uialberto.Northwind.DataAccess;
 
 namespace Uialberto.Northwind.DataAccess.Migrations
 {
     [DbContext(typeof(AppContext))]
-    partial class AppContextModelSnapshot : ModelSnapshot
+    [Migration("20191018005827_Feact-Employee")]
+    partial class FeactEmployee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,7 +39,9 @@ namespace Uialberto.Northwind.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Name");
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
 
                     b.HasKey("EmployeeID");
 
