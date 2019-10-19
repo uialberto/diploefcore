@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using Uialberto.Northwind.Entities;
 
@@ -13,7 +14,8 @@ namespace Uialberto.Northwind.DataAccess
         {
             //Server=localhost;Database=aspnet-MVCAuthSQL;Trusted_Connection=False;MultipleActiveResultSets=true;User Id=SA;Password=my-secret-password;
 
-            optionsBuilder.UseSqlServer("Server=.\\odin;Database=MTTeamNorthwind;Trusted_Connection=False;User Id=desa;Password=desa");
+            optionsBuilder.UseSqlServer("Server=.\\odin;Database=MTTeamNorthwind;Trusted_Connection=False;User Id=desa;Password=desa")
+                .ReplaceService<IMigrationsSqlGenerator,AppContextMigrationSqlGenerator>();
 
             //optionsBuilder.UseSqlServer(System.Configuration.ConfigurationManager.ConnectionStrings["AppContext"].ConnectionString); //SystemConfiguration
 

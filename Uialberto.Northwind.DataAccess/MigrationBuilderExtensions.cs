@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace Uialberto.Northwind.DataAccess
 {
@@ -29,26 +30,30 @@ namespace Uialberto.Northwind.DataAccess
 
         public static MigrationBuilder CreateViewCategoriesProducts(this MigrationBuilder builder)
         {
-            var query = string.Empty;
-            query += "  create view v_CategoriasProductos as  ";
-            query += "  select	c.CategoryID,c.CategoryName,  ";
-            query += "  		p.ProductID, p.Producto  ";
-            query += "  from Categories c  ";
-            query += "  	INNER JOIN Products p on c.CategoryID = p.CategoryID;  ";
-
-            builder.Sql(query);
-
+           
+            builder.Operations.Add(new CreateCategoryProductsView());
             return builder;
         }
 
-        public static MigrationBuilder DropViewCategoriesProducts(this MigrationBuilder builder)
+        public static MigrationBuilder DropViews(this MigrationBuilder builder, string viewName)
         {
-            var query = string.Empty;
-            query += "  drop view v_CategoriasProductos";
 
-            builder.Sql(query);
-
+            builder.Operations.Add(new DropView(viewName));
             return builder;
         }
+    }
+
+    public class CreateCategoryProductsView : MigrationOperation
+    { 
+        
+    }
+
+    public class DropView : MigrationOperation
+    {
+        public DropView(string viewName)
+        {
+            ViewName = viewName;
+        }
+        public string ViewName { get; set; }
     }
 }

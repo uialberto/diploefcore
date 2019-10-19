@@ -11,7 +11,7 @@ namespace Uialberto.Northwind.DataAccess.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropViewCategoriesProducts();
+            migrationBuilder.DropViews("v_CategoriasProductos");
         }
     }
 }
