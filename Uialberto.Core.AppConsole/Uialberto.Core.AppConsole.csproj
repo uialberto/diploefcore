@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Uialberto.Northwind.DataAccess\Uialberto.Northwind.DataAccess.csproj" />
     <ProjectReference Include="..\Uialberto.Northwind.Entities\Uialberto.Northwind.Entities.csproj" />
+    <ProjectReference Include="..\Uialberto.Northwind.Migra\Uialberto.Northwind.Migra.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,8 @@
+Generar Migraciones en Proyectos Independientes
+
+1. Generar la primera migracion en el Assembli que tiene el DBContext.
+2. Crear un nuevo proyecto que va tener las migraciones
+3. Agregar la referencia en el nuevo Poryecto del DBContext (DataAccess)
+4. Mover hacia el Nuevo Proyecto las Migraciones Creadas
+5. Agregar en el OnConfigure que Assembli. Migration Assemble.
+6. En el Proyecto de Inicio se Agrega una Referencia al Proyecto con las Migraciones
