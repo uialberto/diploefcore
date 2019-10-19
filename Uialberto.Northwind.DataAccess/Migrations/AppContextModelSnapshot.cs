@@ -43,7 +43,7 @@ namespace Uialberto.Northwind.DataAccess.Migrations
 
                     b.Property<int>("CategoryID");
 
-                    b.Property<string>("DesProducto");
+                    b.Property<string>("Producto");
 
                     b.Property<decimal>("UnitPrice");
 

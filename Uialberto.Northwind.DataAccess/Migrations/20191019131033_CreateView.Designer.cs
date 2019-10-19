@@ -9,8 +9,8 @@ using Uialberto.Northwind.DataAccess;
 namespace Uialberto.Northwind.DataAccess.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20191018031516_ModProducto")]
-    partial class ModProducto
+    [Migration("20191019131033_CreateView")]
+    partial class CreateView
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

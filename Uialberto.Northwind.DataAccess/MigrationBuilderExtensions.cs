@@ -32,7 +32,7 @@ namespace Uialberto.Northwind.DataAccess
             var query = string.Empty;
             query += "  create view v_CategoriasProductos as  ";
             query += "  select	c.CategoryID,c.CategoryName,  ";
-            query += "  		p.ProductID, p.NombreProducto  ";
+            query += "  		p.ProductID, p.Producto  ";
             query += "  from Categories c  ";
             query += "  	INNER JOIN Products p on c.CategoryID = p.CategoryID;  ";
 
