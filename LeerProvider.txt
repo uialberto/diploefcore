@@ -1,0 +1,11 @@
+La licencia de cada paquete la concede su propietario. NuGet no se hace responsable de los paquetes de terceros ni concede ninguna licencia sobre ellos. Algunos paquetes pueden incluir dependencias que se rigen por licencias adicionales. Siga la URL de origen del paquete (fuente) para determinar cualquier dependencia.
+
+Versión de host 5.3.1.6268 de la Consola del Administrador de paquetes
+
+Escriba 'get-help NuGet' para ver todos los comandos de NuGet disponibles.
+
+PM> Add-Migration InitialCreate -Context AppContext -Outputdir SQL
+To undo this action, use Remove-Migration.
+PM> Add-Migration InitialCreate -Context AppContextSQLite -Outputdir SQLite
+To undo this action, use Remove-Migration.
+PM> 

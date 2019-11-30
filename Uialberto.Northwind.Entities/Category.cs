@@ -8,6 +8,7 @@ namespace Uialberto.Northwind.Entities
     {
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
+        public string Autorizador { get; set; }
         public List<Product> Products { get; set; }
     }
 }
