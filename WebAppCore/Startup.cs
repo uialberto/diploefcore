@@ -35,9 +35,9 @@ namespace WebAppCore
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<Uialberto.Northwind.DataAccess.AppContext>(option => 
-            option.UseSqlServer("Server=.\\odin;Database=NorthwindDbCreate;Trusted_Connection=False;User Id=desa;Password=desa"
-                , x => x.CommandTimeout(60)));
+            //services.AddDbContext<Uialberto.Northwind.DataAccess.AppContext>(option => 
+            //option.UseSqlServer("Server=.\\odin;Database=NorthwindDbCreate;Trusted_Connection=False;User Id=desa;Password=desa"
+            //    , x => x.CommandTimeout(60)));
 
         }
 

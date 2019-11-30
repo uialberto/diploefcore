@@ -6,6 +6,10 @@ namespace Uialberto.Northwind.DataAccess
 {
     public class AppContext : DbContext
     {
+        public AppContext()
+        {
+
+        }
         public AppContext(DbContextOptions options) : base(options)
         {
 
@@ -20,11 +24,13 @@ namespace Uialberto.Northwind.DataAccess
                 .Property(p => p.UnitPrice)
                 .HasColumnType("decimal(8,2)");
         }
+
+
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
         //    //Server=localhost;Database=aspnet-MVCAuthSQL;Trusted_Connection=False;MultipleActiveResultSets=true;User Id=SA;Password=my-secret-password;
 
-        //    optionsBuilder.UseSqlServer("Server=.\\odin;Database=NorthwindDbCreate;Trusted_Connection=False;User Id=desa;Password=desa");
+        //    optionsBuilder.UseSqlServer("Server=.\\odin;Database=NorthwindDbCreate;Trusted_Connection=False;User Id=desa;Password=desa", x=> x.CommandTimeout(60));
 
         //    //optionsBuilder.UseSqlServer(System.Configuration.ConfigurationManager.ConnectionStrings["AppContext"].ConnectionString); //SystemConfiguration
 
