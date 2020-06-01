@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Uialberto.Northwind.DataAccess\Uialberto.Northwind.DataAccess.csproj" />
+    <ProjectReference Include="..\Uialberto.Northwind.Entities\Uialberto.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>
